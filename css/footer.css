@@ -32,7 +32,7 @@
     color: #fff;
     position: relative;
     display: flex;
-    gap: 1rem;
+    gap: 16px;
 }
 .footer-contato a{
     color: #fff;
