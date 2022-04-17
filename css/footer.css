@@ -18,15 +18,21 @@
     color: #cccccc;
 }
 
+.footer-contato{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
 .footer-contato li{
     font-weight: bold;
     font-size: 28px;
     line-height: 1.1;
     color: #fff;
-    margin-bottom: 30px;
     position: relative;
     display: flex;
-    gap: 1rem; 
+    gap: 1rem;
 }
 .footer-contato a{
     color: #fff;
@@ -34,7 +40,8 @@
 }
 
 .footer-copy{
-    grid-column: 1 / -1;
+    text-align: center;
+    padding-bottom: 20px;
     font-size: 1.125rem;
     color: #8f8f8f;
 }
