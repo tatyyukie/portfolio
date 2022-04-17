@@ -27,7 +27,7 @@
 .formacao .subtitulo {
     text-transform: uppercase;
     color: #000;
-    max-width: 5ch;
+    min-width: 5ch;
 }
 
 .formacao-texto{
