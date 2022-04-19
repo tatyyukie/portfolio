@@ -37,10 +37,6 @@
     text-decoration: none;
 }
 
-.contato-form{
-    padding: 0 20px;
-}
-
 .contato-form label {
     font-size: 1rem;
     line-height: 1.1;
@@ -57,7 +53,7 @@
 
 .contato-form input:focus{
     outline: none;
-    border: 2px solid;
+    border: 2px solid #D3758C;
 }
 
 .contato-form input[type="text"]{
@@ -65,17 +61,25 @@
 }
 
 .contato-form button{
-    padding: 8px 32px;
+    font-family: 'Poppins', sans-serif;
+    padding: 8px 16px;
     margin: 8px 0;
     border: 2px solid;
+    background-color: #D3758C;
     border-radius: 5px;
-    background-image: linear-gradient(to right, #D3758C, #F4A6B3);
     color: #fff;
     font-weight: bold;
     font-size: 1rem;
-    letter-spacing: 7.5%;
+    letter-spacing: 2px;
     line-height: 32px;
     cursor: pointer;
+    transition: all 0.3s;
+}
+
+.contato-form button:hover{
+    background-color: #F4A6B3;
+    color: #fff;
+    transition: all 0.3s;
 }
 
 @media (max-width: 800px){
