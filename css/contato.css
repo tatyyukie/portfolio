@@ -11,7 +11,7 @@
 .contato-texto{
     font-size: 1.25rem;
     line-height: 1.33;
-    color: #11111;
+    color: #111;
 }
 
 .contato-links{
@@ -40,7 +40,7 @@
 .contato-form label {
     font-size: 1rem;
     line-height: 1.1;
-    color: #111111;
+    color: #111;
 }
 
 .contato-form input{
