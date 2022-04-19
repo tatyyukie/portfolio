@@ -27,7 +27,7 @@
 .formacao .subtitulo {
     text-transform: uppercase;
     color: #000;
-    min-width: 5ch;
+    max-width: 5ch;
 }
 
 .formacao-texto{
@@ -137,6 +137,10 @@
         grid-template-columns: 1fr;
         padding: 60px 20px;
         gap: 40px;
+    }
+
+    .formacao-container::after{
+        display: none;
     }
 
     .formacao .subtitulo {
