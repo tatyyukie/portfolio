@@ -64,7 +64,11 @@
 
 .contato-form textarea{
     margin: 8px 0;
+<<<<<<< HEAD
     padding: 12px 0;
+=======
+    padding: 0;
+>>>>>>> 14f09e673d6a4eec0889a738fb7bf8941518aeb2
     font-family: "Lato", sans-serif;
     font-size: 1rem;
     width: 100%;
