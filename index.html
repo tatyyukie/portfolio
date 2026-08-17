@@ -13,11 +13,23 @@
 
         <!-- Favicon -->
         <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./assets/apple-touch-icon.png"
+        />
+        <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="favicon-32x32.png"
+            href="./assets/favicon-32x32.png"
         />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./assets/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./assets/site.webmanifest" />
 
         <!-- CSS -->
         <link rel="stylesheet" href="./assets/style.css" />
@@ -33,6 +45,27 @@
             href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&display=swap"
             rel="stylesheet"
         />
+
+        <style>
+            @keyframes marquee {
+                0% {
+                    transform: translateX(0%);
+                }
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+
+            .animate-marquee {
+                display: flex;
+                width: max-content;
+                animation: marquee 50s linear infinite;
+            }
+
+            .animate-marquee:hover {
+                animation-play-state: paused;
+            }
+        </style>
     </head>
 
     <body class="bg-[#0d0910] text-[#f7f2f8] font-sans antialiased">
@@ -40,12 +73,12 @@
         <!-- NAVBAR -->
         <!-- ========================================================= -->
 
-        <header class="fixed top-4 left-0 right-0 z-10">
+        <header class="fixed top-4 left-0 right-0 z-50 px-4">
             <nav
-                class="mx-auto mt-6 w-fit max-w-[calc(100%-32px)] rounded-full border border-white/[0.09] bg-[#120d15]/90 px-5 py-3 backdrop-blur-xl transition-all duration-300"
+                class="mx-auto w-fit max-w-full rounded-full border border-white/[0.09] bg-[#120d15]/90 px-4 py-2.5 sm:px-5 sm:py-3 backdrop-blur-xl transition-all duration-300"
                 id="navbar"
             >
-                <div class="flex items-center gap-6">
+                <div class="flex items-center gap-4 sm:gap-6">
                     <!-- Logo -->
                     <a
                         href="index.html"
@@ -56,7 +89,7 @@
 
                     <!-- Links -->
                     <div
-                        class="hidden items-center gap-5 text-xs text-[#9f96a5] md:flex"
+                        class="flex items-center gap-3 text-xs text-[#9f96a5] sm:gap-5"
                     >
                         <a
                             href="index.html#experiencia"
@@ -84,7 +117,7 @@
                     <div class="hidden h-4 w-px bg-white/10 md:block"></div>
 
                     <!-- Social -->
-                    <div class="flex items-center gap-4">
+                    <div class="hidden items-center gap-4 md:flex">
                         <!-- GitHub -->
                         <a
                             href="https://github.com/tatyyukie"
@@ -151,43 +184,43 @@
             </nav>
         </header>
 
-        <main class="relative mx-auto max-w-6xl px-6 lg:px-12">
+        <main class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-12">
             <!-- ========================================================= -->
             <!-- HERO -->
             <!-- ========================================================= -->
 
             <section
                 id="inicio"
-                class="relative min-h-screen flex flex-col justify-between pt-60 pb-10 transition-all duration-700 opacity-100 translate-y-0"
+                class="relative min-h-screen flex flex-col justify-between pt-36 sm:pt-48 md:pt-60 pb-10 transition-all duration-700 opacity-100 translate-y-0"
             >
                 <!-- Glow -->
                 <div
-                    class="pointer-events-none absolute left-1/2 top-16 h-[480px] w-[850px] -translate-x-1/2 rounded-full bg-[#b52c78]/20 blur-[150px]"
+                    class="pointer-events-none absolute left-1/2 top-16 h-[300px] w-[300px] sm:h-[480px] sm:w-[850px] -translate-x-1/2 rounded-full bg-[#b52c78]/20 blur-[100px] sm:blur-[150px]"
                 ></div>
 
                 <div
-                    class="relative mx-auto flex max-w-4xl flex-col items-center px-6 text-center"
+                    class="relative z-20 mx-auto flex max-w-4xl flex-col items-center px-2 text-center"
                 >
                     <p
-                        class="mb-6 font-mono text-[12px] font-medium uppercase tracking-[0.32em] text-[#a993b4]"
+                        class="mb-4 sm:mb-6 font-mono text-[10px] sm:text-[12px] font-medium uppercase tracking-[0.25em] sm:tracking-[0.32em] text-[#a993b4]"
                     >
                         ANALISTA DE TESTES · QA PLENO
                     </p>
 
                     <h1
-                        class="font-display text-5xl font-bold leading-[1.05] tracking-[-0.045em] sm:text-6xl md:text-[64px]"
+                        class="font-display text-4xl font-bold leading-[1.1] tracking-[-0.045em] sm:text-6xl md:text-[64px]"
                     >
                         Oi, eu sou a
 
                         <span
-                            class="bg-gradient-to-r from-[#f05cab] via-[#be63ea] pr-12 bg-clip-text text-transparent"
+                            class="inline-block pr-2 bg-gradient-to-r from-[#f05cab] via-[#be63ea] bg-clip-text text-transparent"
                         >
                             Tatiana
                         </span>
                     </h1>
 
                     <p
-                        class="mt-7 max-w-[560px] text-sm leading-6 text-[#a99faa]"
+                        class="mt-5 sm:mt-7 max-w-[560px] text-xs sm:text-sm leading-6 text-[#a99faa]"
                     >
                         Sou
 
@@ -200,7 +233,9 @@
                         estável, rápida e confiável.
                     </p>
 
-                    <div class="mt-9 flex items-center gap-10">
+                    <div
+                        class="mt-7 sm:mt-9 flex flex-wrap justify-center items-center gap-4 sm:gap-10"
+                    >
                         <a
                             href="#"
                             id="downloadCv"
@@ -235,10 +270,12 @@
                 </div>
 
                 <!-- STACK CAROUSEL -->
-                <div class="relative mx-auto mt-auto w-full pt-12 pb-2">
+                <div class="relative mx-auto mt-auto w-full pt-8 sm:pt-12 pb-2">
                     <div class="flex items-end gap-5">
-                        <!-- Texto fixo -->
-                        <div class="min-w-[180px] shrink-0 pb-2">
+                        <!-- Texto fixo (Oculto em telas menores/mobile com 'hidden md:block') -->
+                        <div
+                            class="hidden md:block min-w-[180px] shrink-0 pb-2"
+                        >
                             <p class="text-xs text-[#b49db7]">4 anos de</p>
                             <p
                                 class="font-display text-[43px] font-bold leading-none"
@@ -257,146 +294,150 @@
                         <div class="relative w-full overflow-hidden">
                             <!-- Fade Gradiente Esquerdo -->
                             <div
-                                class="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-12 bg-gradient-to-r from-[#0d0910] to-transparent"
+                                class="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-8 sm:w-12 bg-gradient-to-r from-[#0d0910] to-transparent"
                             ></div>
                             <!-- Fade Gradiente Direito -->
                             <div
-                                class="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-12 bg-gradient-to-l from-[#0d0910] to-transparent"
+                                class="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-8 sm:w-12 bg-gradient-to-l from-[#0d0910] to-transparent"
                             ></div>
 
                             <div class="custom-scrollbar flex overflow-x-auto">
                                 <div class="animate-marquee flex items-center">
                                     <!-- Bloco 1 (Original) -->
-                                    <div class="flex items-center gap-4 pr-4">
+                                    <div
+                                        class="flex items-center gap-3 sm:gap-4 pr-3 sm:pr-4"
+                                    >
                                         <div
-                                            class="flex h-[135px] w-[150px] shrink-0 flex-col justify-end rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#542442] to-[#21121f] p-5 shadow-lg backdrop-blur-sm"
+                                            class="flex h-[110px] w-[130px] sm:h-[135px] sm:w-[150px] shrink-0 flex-col justify-end rounded-[16px] sm:rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#542442] to-[#21121f] p-4 sm:p-5 shadow-lg backdrop-blur-sm"
                                         >
                                             <span
-                                                class="font-display text-base font-bold text-white"
+                                                class="font-display text-sm sm:text-base font-bold text-white"
                                                 >Cypress</span
                                             >
                                         </div>
                                         <div
-                                            class="flex h-[135px] w-[150px] shrink-0 flex-col justify-end rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#164951] to-[#131b22] p-5 shadow-lg backdrop-blur-sm"
+                                            class="flex h-[110px] w-[130px] sm:h-[135px] sm:w-[150px] shrink-0 flex-col justify-end rounded-[16px] sm:rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#164951] to-[#131b22] p-4 sm:p-5 shadow-lg backdrop-blur-sm"
                                         >
                                             <span
-                                                class="font-display text-base font-bold text-white"
+                                                class="font-display text-sm sm:text-base font-bold text-white"
                                                 >Selenium</span
                                             >
                                         </div>
                                         <div
-                                            class="flex h-[135px] w-[150px] shrink-0 flex-col justify-end rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#38264c] to-[#1b1724] p-5 shadow-lg backdrop-blur-sm"
+                                            class="flex h-[110px] w-[130px] sm:h-[135px] sm:w-[150px] shrink-0 flex-col justify-end rounded-[16px] sm:rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#38264c] to-[#1b1724] p-4 sm:p-5 shadow-lg backdrop-blur-sm"
                                         >
                                             <span
-                                                class="font-display text-base font-bold text-white"
+                                                class="font-display text-sm sm:text-base font-bold text-white"
                                                 >Postman</span
                                             >
                                         </div>
                                         <div
-                                            class="flex h-[135px] w-[150px] shrink-0 flex-col justify-end rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#3d2638] to-[#1b141c] p-5 shadow-lg backdrop-blur-sm"
+                                            class="flex h-[110px] w-[130px] sm:h-[135px] sm:w-[150px] shrink-0 flex-col justify-end rounded-[16px] sm:rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#3d2638] to-[#1b141c] p-4 sm:p-5 shadow-lg backdrop-blur-sm"
                                         >
                                             <span
-                                                class="font-display text-base font-bold text-white"
+                                                class="font-display text-sm sm:text-base font-bold text-white"
                                                 >JMeter</span
                                             >
                                         </div>
                                         <div
-                                            class="flex h-[135px] w-[150px] shrink-0 flex-col justify-end rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#542442] to-[#21121f] p-5 shadow-lg backdrop-blur-sm"
+                                            class="flex h-[110px] w-[130px] sm:h-[135px] sm:w-[150px] shrink-0 flex-col justify-end rounded-[16px] sm:rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#542442] to-[#21121f] p-4 sm:p-5 shadow-lg backdrop-blur-sm"
                                         >
                                             <span
-                                                class="font-display text-base font-bold text-white"
+                                                class="font-display text-sm sm:text-base font-bold text-white"
                                                 >Cypress</span
                                             >
                                         </div>
                                         <div
-                                            class="flex h-[135px] w-[150px] shrink-0 flex-col justify-end rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#164951] to-[#131b22] p-5 shadow-lg backdrop-blur-sm"
+                                            class="flex h-[110px] w-[130px] sm:h-[135px] sm:w-[150px] shrink-0 flex-col justify-end rounded-[16px] sm:rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#164951] to-[#131b22] p-4 sm:p-5 shadow-lg backdrop-blur-sm"
                                         >
                                             <span
-                                                class="font-display text-base font-bold text-white"
+                                                class="font-display text-sm sm:text-base font-bold text-white"
                                                 >Selenium</span
                                             >
                                         </div>
                                         <div
-                                            class="flex h-[135px] w-[150px] shrink-0 flex-col justify-end rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#38264c] to-[#1b1724] p-5 shadow-lg backdrop-blur-sm"
+                                            class="flex h-[110px] w-[130px] sm:h-[135px] sm:w-[150px] shrink-0 flex-col justify-end rounded-[16px] sm:rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#38264c] to-[#1b1724] p-4 sm:p-5 shadow-lg backdrop-blur-sm"
                                         >
                                             <span
-                                                class="font-display text-base font-bold text-white"
+                                                class="font-display text-sm sm:text-base font-bold text-white"
                                                 >Postman</span
                                             >
                                         </div>
                                         <div
-                                            class="flex h-[135px] w-[150px] shrink-0 flex-col justify-end rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#3d2638] to-[#1b141c] p-5 shadow-lg backdrop-blur-sm"
+                                            class="flex h-[110px] w-[130px] sm:h-[135px] sm:w-[150px] shrink-0 flex-col justify-end rounded-[16px] sm:rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#3d2638] to-[#1b141c] p-4 sm:p-5 shadow-lg backdrop-blur-sm"
                                         >
                                             <span
-                                                class="font-display text-base font-bold text-white"
+                                                class="font-display text-sm sm:text-base font-bold text-white"
                                                 >JMeter</span
                                             >
                                         </div>
                                     </div>
 
-                                    <!-- Bloco 2 (Cópia idêntica para efeito de loop infinito perfeitamente contínuo) -->
-                                    <div class="flex items-center gap-4 pr-4">
+                                    <!-- Bloco 2 (Cópia idêntica) -->
+                                    <div
+                                        class="flex items-center gap-3 sm:gap-4 pr-3 sm:pr-4"
+                                    >
                                         <div
-                                            class="flex h-[135px] w-[150px] shrink-0 flex-col justify-end rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#542442] to-[#21121f] p-5 shadow-lg backdrop-blur-sm"
+                                            class="flex h-[110px] w-[130px] sm:h-[135px] sm:w-[150px] shrink-0 flex-col justify-end rounded-[16px] sm:rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#542442] to-[#21121f] p-4 sm:p-5 shadow-lg backdrop-blur-sm"
                                         >
                                             <span
-                                                class="font-display text-base font-bold text-white"
+                                                class="font-display text-sm sm:text-base font-bold text-white"
                                                 >Cypress</span
                                             >
                                         </div>
                                         <div
-                                            class="flex h-[135px] w-[150px] shrink-0 flex-col justify-end rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#164951] to-[#131b22] p-5 shadow-lg backdrop-blur-sm"
+                                            class="flex h-[110px] w-[130px] sm:h-[135px] sm:w-[150px] shrink-0 flex-col justify-end rounded-[16px] sm:rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#164951] to-[#131b22] p-4 sm:p-5 shadow-lg backdrop-blur-sm"
                                         >
                                             <span
-                                                class="font-display text-base font-bold text-white"
+                                                class="font-display text-sm sm:text-base font-bold text-white"
                                                 >Playwright</span
                                             >
                                         </div>
                                         <div
-                                            class="flex h-[135px] w-[150px] shrink-0 flex-col justify-end rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#38264c] to-[#1b1724] p-5 shadow-lg backdrop-blur-sm"
+                                            class="flex h-[110px] w-[130px] sm:h-[135px] sm:w-[150px] shrink-0 flex-col justify-end rounded-[16px] sm:rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#38264c] to-[#1b1724] p-4 sm:p-5 shadow-lg backdrop-blur-sm"
                                         >
                                             <span
-                                                class="font-display text-base font-bold text-white"
+                                                class="font-display text-sm sm:text-base font-bold text-white"
                                                 >Postman</span
                                             >
                                         </div>
                                         <div
-                                            class="flex h-[135px] w-[150px] shrink-0 flex-col justify-end rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#3d2638] to-[#1b141c] p-5 shadow-lg backdrop-blur-sm"
+                                            class="flex h-[110px] w-[130px] sm:h-[135px] sm:w-[150px] shrink-0 flex-col justify-end rounded-[16px] sm:rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#3d2638] to-[#1b141c] p-4 sm:p-5 shadow-lg backdrop-blur-sm"
                                         >
                                             <span
-                                                class="font-display text-base font-bold text-white"
+                                                class="font-display text-sm sm:text-base font-bold text-white"
                                                 >JMeter</span
                                             >
                                         </div>
                                         <div
-                                            class="flex h-[135px] w-[150px] shrink-0 flex-col justify-end rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#542442] to-[#21121f] p-5 shadow-lg backdrop-blur-sm"
+                                            class="flex h-[110px] w-[130px] sm:h-[135px] sm:w-[150px] shrink-0 flex-col justify-end rounded-[16px] sm:rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#542442] to-[#21121f] p-4 sm:p-5 shadow-lg backdrop-blur-sm"
                                         >
                                             <span
-                                                class="font-display text-base font-bold text-white"
+                                                class="font-display text-sm sm:text-base font-bold text-white"
                                                 >Cypress</span
                                             >
                                         </div>
                                         <div
-                                            class="flex h-[135px] w-[150px] shrink-0 flex-col justify-end rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#164951] to-[#131b22] p-5 shadow-lg backdrop-blur-sm"
+                                            class="flex h-[110px] w-[130px] sm:h-[135px] sm:w-[150px] shrink-0 flex-col justify-end rounded-[16px] sm:rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#164951] to-[#131b22] p-4 sm:p-5 shadow-lg backdrop-blur-sm"
                                         >
                                             <span
-                                                class="font-display text-base font-bold text-white"
+                                                class="font-display text-sm sm:text-base font-bold text-white"
                                                 >Playwright</span
                                             >
                                         </div>
                                         <div
-                                            class="flex h-[135px] w-[150px] shrink-0 flex-col justify-end rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#38264c] to-[#1b1724] p-5 shadow-lg backdrop-blur-sm"
+                                            class="flex h-[110px] w-[130px] sm:h-[135px] sm:w-[150px] shrink-0 flex-col justify-end rounded-[16px] sm:rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#38264c] to-[#1b1724] p-4 sm:p-5 shadow-lg backdrop-blur-sm"
                                         >
                                             <span
-                                                class="font-display text-base font-bold text-white"
+                                                class="font-display text-sm sm:text-base font-bold text-white"
                                                 >Postman</span
                                             >
                                         </div>
                                         <div
-                                            class="flex h-[135px] w-[150px] shrink-0 flex-col justify-end rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#3d2638] to-[#1b141c] p-5 shadow-lg backdrop-blur-sm"
+                                            class="flex h-[110px] w-[130px] sm:h-[135px] sm:w-[150px] shrink-0 flex-col justify-end rounded-[16px] sm:rounded-[20px] border border-white/[0.08] bg-gradient-to-br from-[#3d2638] to-[#1b141c] p-4 sm:p-5 shadow-lg backdrop-blur-sm"
                                         >
                                             <span
-                                                class="font-display text-base font-bold text-white"
+                                                class="font-display text-sm sm:text-base font-bold text-white"
                                                 >JMeter</span
                                             >
                                         </div>
@@ -413,27 +454,27 @@
             <!-- ========================================================= -->
 
             <section
-                class="flex min-h-[420px] items-center justify-center pt-18"
+                class="flex min-h-[300px] sm:min-h-[420px] items-center justify-center pt-10 sm:pt-18"
             >
                 <div class="text-center font-display">
                     <p
-                        class="text-5xl font-bold leading-tight text-[#ff5bad] md:text-[52px]"
+                        class="text-3xl font-bold leading-tight text-[#ff5bad] sm:text-5xl md:text-[52px]"
                     >
                         Qualidade
                     </p>
 
                     <p
-                        class="mt-1 text-5xl font-bold leading-tight text-[#ad7cf0] md:text-[52px]"
+                        class="mt-6 text-3xl font-bold leading-tight text-[#ad7cf0] sm:text-5xl md:text-[52px]"
                     >
                         Automação
                     </p>
 
                     <p
-                        class="mt-1 flex items-center justify-center gap-3 text-5xl font-bold leading-tight text-[#38cbd7] md:text-[52px]"
+                        class="mt-6 flex items-center justify-center gap-2 sm:gap-3 text-3xl font-bold leading-tight text-[#38cbd7] sm:text-5xl md:text-[52px]"
                     >
                         & Café
                         <svg
-                            class="h-10 w-10 md:h-[52px] md:w-[52px]"
+                            class="h-7 w-7 sm:h-10 sm:w-10 md:h-[52px] md:w-[52px]"
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
@@ -458,9 +499,9 @@
             <!-- ========================================================= -->
 
             <section id="experiencia" class="py-10">
-                <div class="mb-10">
+                <div class="mb-8 sm:mb-10">
                     <h2
-                        class="font-display max-w-[260px] text-3xl font-bold leading-tight tracking-tight"
+                        class="font-display max-w-[260px] text-2xl sm:text-3xl font-bold leading-tight tracking-tight"
                     >
                         Onde eu já
                         <br />
@@ -468,9 +509,9 @@
                     </h2>
                 </div>
 
-                <div class="grid gap-5 md:grid-cols-2">
+                <div class="grid gap-4 sm:gap-5 md:grid-cols-2">
                     <article
-                        class="rounded-2xl border border-white/[0.08] bg-[#151019] p-6 transition hover:-translate-y-1 hover:border-[#e856a5]/30"
+                        class="rounded-2xl border border-white/[0.08] bg-[#151019] p-5 sm:p-6 transition hover:-translate-y-1 hover:border-[#e856a5]/30"
                     >
                         <h3 class="font-display text-base font-bold">
                             Analista de Testes Pleno
@@ -482,14 +523,16 @@
                             TATA CONSULTANCY SERVICES · 2025 — HOJE
                         </p>
 
-                        <p class="mt-5 text-xs leading-5 text-[#a69ca9]">
+                        <p
+                            class="mt-4 sm:mt-5 text-xs leading-5 text-[#a69ca9]"
+                        >
                             Testes manuais e exploratórios em aplicações web,
                             desktop, mobile e APIs.
                         </p>
                     </article>
 
                     <article
-                        class="rounded-2xl border border-white/[0.08] bg-[#151019] p-6 transition hover:-translate-y-1 hover:border-[#e856a5]/30"
+                        class="rounded-2xl border border-white/[0.08] bg-[#151019] p-5 sm:p-6 transition hover:-translate-y-1 hover:border-[#e856a5]/30"
                     >
                         <h3 class="font-display text-base font-bold">
                             Analista de Testes Júnior
@@ -501,14 +544,16 @@
                             TATA CONSULTANCY SERVICES · 2023 — 2024
                         </p>
 
-                        <p class="mt-5 text-xs leading-5 text-[#a69ca9]">
+                        <p
+                            class="mt-4 sm:mt-5 text-xs leading-5 text-[#a69ca9]"
+                        >
                             Testes manuais e exploratórios em aplicações web,
                             desktop, mobile e APIs.
                         </p>
                     </article>
 
                     <article
-                        class="rounded-2xl border border-white/[0.08] bg-[#151019] p-6 transition hover:-translate-y-1 hover:border-[#e856a5]/30"
+                        class="rounded-2xl border border-white/[0.08] bg-[#151019] p-5 sm:p-6 transition hover:-translate-y-1 hover:border-[#e856a5]/30"
                     >
                         <h3 class="font-display text-base font-bold">
                             Trainee
@@ -520,13 +565,15 @@
                             TATA CONSULTANCY SERVICES · 2022 — 2023
                         </p>
 
-                        <p class="mt-5 text-xs leading-5 text-[#a69ca9]">
+                        <p
+                            class="mt-4 sm:mt-5 text-xs leading-5 text-[#a69ca9]"
+                        >
                             Testes manuais e exploratórios em aplicações web.
                         </p>
                     </article>
 
                     <article
-                        class="rounded-2xl border border-white/[0.08] bg-[#151019] p-6 transition hover:-translate-y-1 hover:border-[#e856a5]/30"
+                        class="rounded-2xl border border-white/[0.08] bg-[#151019] p-5 sm:p-6 transition hover:-translate-y-1 hover:border-[#e856a5]/30"
                     >
                         <h3 class="font-display text-base font-bold">
                             Estágio
@@ -538,7 +585,9 @@
                             TATA CONSULTANCY SERVICES · 2022
                         </p>
 
-                        <p class="mt-5 text-xs leading-5 text-[#a69ca9]">
+                        <p
+                            class="mt-4 sm:mt-5 text-xs leading-5 text-[#a69ca9]"
+                        >
                             Programa de estágio com treinamentos realizados em
                             Amazon Web Services (AWS), Lógica de Programação,
                             HTML, CSS, Java, JavaScript, Banco de Dados (SQL),
@@ -553,16 +602,18 @@
             <!-- SKILLS -->
             <!-- ========================================================= -->
 
-            <section id="skills" class="pt-20 pb-10">
+            <section id="skills" class="pt-12 sm:pt-20 pb-10">
                 <h2
-                    class="font-display max-w-[420px] text-3xl font-bold leading-tight tracking-tight"
+                    class="font-display max-w-[420px] text-2xl sm:text-3xl font-bold leading-tight tracking-tight"
                 >
                     Estas são as
                     <br />
                     tecnologias que eu uso
                 </h2>
 
-                <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <div
+                    class="mt-8 sm:mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+                >
                     <!-- Automação -->
                     <div
                         class="rounded-2xl border border-white/[0.08] bg-[#151019] p-5"
@@ -654,11 +705,11 @@
             <section class="py-6">
                 <a
                     href="formacao.html"
-                    class="group flex items-center justify-between rounded-2xl border border-white/[0.08] bg-[#151019] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#f05cab]/40"
+                    class="group flex items-center justify-between rounded-2xl border border-white/[0.08] bg-[#151019] p-5 sm:p-6 transition duration-300 hover:-translate-y-1 hover:border-[#f05cab]/40"
                 >
-                    <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-3 sm:gap-4">
                         <!-- Ícone -->
-                        <div class="text-[#f05cab]">
+                        <div class="text-[#f05cab] shrink-0">
                             <svg
                                 class="h-6 w-6"
                                 viewBox="0 0 24 24"
@@ -676,11 +727,13 @@
                         <!-- Textos -->
                         <div>
                             <h3
-                                class="font-display text-base font-bold text-white transition group-hover:text-[#f05cab]"
+                                class="font-display text-sm sm:text-base font-bold text-white transition group-hover:text-[#f05cab]"
                             >
                                 Formação e certificações
                             </h3>
-                            <p class="mt-1 text-xs text-[#a69ca9]">
+                            <p
+                                class="mt-1 text-[11px] sm:text-xs text-[#a69ca9]"
+                            >
                                 Graduação, ISTQB CTFL e cursos de automação, API
                                 e performance.
                             </p>
@@ -689,7 +742,7 @@
 
                     <!-- Seta -->
                     <div
-                        class="text-white transition duration-300 group-hover:translate-x-1 group-hover:text-[#f05cab]"
+                        class="text-white transition duration-300 group-hover:translate-x-1 group-hover:text-[#f05cab] shrink-0 ml-2"
                     >
                         <svg
                             class="h-5 w-5"
@@ -712,13 +765,13 @@
         <!-- FOOTER -->
         <!-- ========================================================= -->
 
-        <footer class="mx-auto max-w-6xl px-6 pt-8 pb-8 lg:px-12">
+        <footer class="mx-auto max-w-6xl px-4 sm:px-6 pt-8 pb-8 lg:px-12">
             <div
-                class="flex items-center justify-between rounded-2xl border border-white/[0.08] bg-[#151019] px-7 py-6"
+                class="flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl border border-white/[0.08] bg-[#151019] px-5 sm:px-7 py-5 sm:py-6 text-center sm:text-left"
             >
                 <a
-                    href="mailto:seuemail@email.com"
-                    class="font-display text-base font-medium text-white transition hover:text-[#f05cab]"
+                    href="mailto:tatyy-yukie@hotmail.com"
+                    class="font-display text-sm sm:text-base font-medium text-white transition hover:text-[#f05cab]"
                 >
                     Vamos conversar
                 </a>
@@ -759,7 +812,7 @@
                     </a>
 
                     <a
-                        href="mailto:seuemail@email.com"
+                        href="mailto:tatyy-yukie@hotmail.com"
                         class="text-[#8f8592] transition hover:text-[#f05cab]"
                     >
                         <svg
@@ -776,7 +829,9 @@
                 </div>
             </div>
 
-            <p class="mt-6 text-[10px] text-[#806f82]">tatiana.qa © 2026</p>
+            <p class="mt-6 text-center sm:text-left text-[10px] text-[#806f82]">
+                tatiana.qa © 2026
+            </p>
         </footer>
 
         <script src="./js/script.js"></script>

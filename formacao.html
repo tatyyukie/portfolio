@@ -11,6 +11,26 @@
             content="Formação acadêmica e certificações profissionais de Tatiana Motoyama."
         />
 
+        <!-- Favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./assets/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./assets/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./assets/site.webmanifest" />
+
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -64,19 +84,6 @@
                 overflow-x: hidden;
             }
 
-            .page-glow {
-                position: absolute;
-                pointer-events: none;
-                width: 850px;
-                height: 500px;
-                left: 50%;
-                top: 70px;
-                transform: translateX(-50%);
-                border-radius: 9999px;
-                background: rgba(181, 44, 120, 0.09);
-                filter: blur(130px);
-            }
-
             .education-card {
                 background: linear-gradient(
                     145deg,
@@ -102,12 +109,12 @@
         <!-- NAVBAR -->
         <!-- ========================================================= -->
 
-        <header class="fixed top-0 left-0 right-0 z-50">
+        <header class="fixed top-4 left-0 right-0 z-50 px-4">
             <nav
                 id="navbar"
-                class="mx-auto mt-6 w-fit max-w-[calc(100%-32px)] rounded-full border border-white/[0.09] bg-[#120d15]/90 px-5 py-3 backdrop-blur-xl transition-all duration-300"
+                class="mx-auto w-fit max-w-full rounded-full border border-white/[0.09] bg-[#120d15]/90 px-4 py-2.5 sm:px-5 sm:py-3 backdrop-blur-xl transition-all duration-300"
             >
-                <div class="flex items-center gap-6">
+                <div class="flex items-center gap-4 sm:gap-6">
                     <!-- Logo -->
                     <a
                         href="index.html"
@@ -117,17 +124,19 @@
                     </a>
 
                     <!-- Navigation -->
-                    <div class="hidden items-center gap-5 text-xs md:flex">
+                    <div
+                        class="flex items-center gap-3 text-xs text-[#9f96a5] sm:gap-5"
+                    >
                         <a
                             href="index.html#experiencia"
-                            class="text-[#9f96a5] transition hover:text-[#f05cab]"
+                            class="hover:text-[#f05cab] transition"
                         >
                             experiência
                         </a>
 
                         <a
                             href="index.html#skills"
-                            class="text-[#9f96a5] transition hover:text-[#f05cab]"
+                            class="hover:text-[#f05cab] transition"
                         >
                             skills
                         </a>
@@ -145,7 +154,7 @@
                     <div class="hidden h-4 w-px bg-white/10 md:block"></div>
 
                     <!-- Social -->
-                    <div class="flex items-center gap-4">
+                    <div class="hidden items-center gap-4 md:flex">
                         <!-- GitHub -->
                         <a
                             href="https://github.com/tatyyukie"
@@ -216,30 +225,34 @@
         <!-- CONTEÚDO -->
         <!-- ========================================================= -->
 
-        <main class="relative mx-auto max-w-6xl px-6 pt-32 lg:px-12">
+        <main
+            class="relative mx-auto max-w-6xl px-4 sm:px-6 pt-28 sm:pt-36 lg:px-12"
+        >
             <!-- Glow -->
             <div
-                class="pointer-events-none absolute left-1/2 top-16 h-[480px] w-[850px] -translate-x-1/2 rounded-full bg-[#b52c78]/20 blur-[150px]"
+                class="pointer-events-none absolute left-1/2 top-16 h-[300px] w-[300px] sm:h-[480px] sm:w-[850px] -translate-x-1/2 rounded-full bg-[#b52c78]/20 blur-[100px] sm:blur-[150px]"
             ></div>
 
             <!-- ================================================= -->
             <!-- HEADER DA PÁGINA -->
             <!-- ================================================= -->
 
-            <section class="pt-12 pb-16">
+            <section class="pt-6 sm:pt-12 pb-10 sm:pb-16">
                 <h1
-                    class="font-display text-4xl font-bold leading-tight tracking-[-0.035em] sm:text-5xl"
+                    class="font-display text-3xl font-bold leading-tight tracking-[-0.035em] sm:text-5xl"
                 >
                     Formação e
 
                     <span
-                        class="bg-gradient-to-r from-[#f05cab] via-[#be63ea] pr-12 bg-clip-text text-transparent"
+                        class="bg-gradient-to-r from-[#f05cab] via-[#be63ea] pr-4 sm:pr-12 bg-clip-text text-transparent"
                     >
                         certificações
                     </span>
                 </h1>
 
-                <p class="mt-5 max-w-[650px] text-sm leading-6 text-[#aaa0ad]">
+                <p
+                    class="mt-4 sm:mt-5 max-w-[650px] text-xs sm:text-sm leading-6 text-[#aaa0ad]"
+                >
                     Estudo contínuo é parte do meu trabalho; aqui estão a base
                     acadêmica e as certificações que sustentam minha atuação em
                     qualidade de software.
@@ -250,8 +263,8 @@
             <!-- FORMAÇÃO ACADÊMICA -->
             <!-- ================================================= -->
 
-            <section class="pb-16">
-                <div class="mb-8 flex items-center gap-3">
+            <section class="pb-10 sm:pb-16">
+                <div class="mb-6 sm:mb-8 flex items-center gap-3">
                     <!-- Ícone Chapéu -->
                     <svg
                         class="h-5 w-5 text-[#f05cab]"
@@ -265,17 +278,19 @@
                         <path d="M22 10v6" />
                     </svg>
 
-                    <h2 class="font-display text-xl font-bold">
+                    <h2 class="font-display text-lg sm:text-xl font-bold">
                         Formação acadêmica
                     </h2>
                 </div>
 
-                <div class="grid gap-5 md:grid-cols-2">
+                <div class="grid gap-4 sm:gap-5 md:grid-cols-2">
                     <!-- Graduação -->
                     <article
-                        class="education-card rounded-2xl border border-white/[0.08] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#f05cab]/30"
+                        class="education-card rounded-2xl border border-white/[0.08] p-5 sm:p-6 transition duration-300 hover:-translate-y-1 hover:border-[#f05cab]/30"
                     >
-                        <h3 class="font-display text-base font-bold leading-6">
+                        <h3
+                            class="font-display text-sm sm:text-base font-bold leading-6"
+                        >
                             Tecnólogo em Análise e Desenvolvimento de Sistemas
                         </h3>
 
@@ -292,8 +307,8 @@
             <!-- CERTIFICAÇÕES -->
             <!-- ================================================= -->
 
-            <section class="pb-16">
-                <div class="mb-8 flex items-center gap-3">
+            <section class="pb-10 sm:pb-16">
+                <div class="mb-6 sm:mb-8 flex items-center gap-3">
                     <!-- Ícone Medalha/Selo -->
                     <svg
                         class="h-5 w-5 text-[#f05cab]"
@@ -307,21 +322,21 @@
                         <path d="M8 19.5 7 22l5-2 5 2-1-2.5" />
                     </svg>
 
-                    <h2 class="font-display text-xl font-bold">
+                    <h2 class="font-display text-lg sm:text-xl font-bold">
                         Certificações
                     </h2>
                 </div>
 
                 <div class="grid gap-4 md:grid-cols-2">
                     <article
-                        class="certification-card flex min-h-[60px] items-center justify-between rounded-2xl border border-white/[0.08] px-5 py-4 transition duration-300 hover:border-[#38cbd7]/30"
+                        class="certification-card flex min-h-[60px] items-center justify-between rounded-2xl border border-white/[0.08] px-4 sm:px-5 py-4 transition duration-300 hover:border-[#38cbd7]/30"
                     >
                         <p class="text-xs font-medium text-[#ddd6df]">
                             ISTQB CTFL — Certified Tester Foundation Level
                         </p>
 
                         <span
-                            class="ml-5 text-[10px] font-semibold text-[#38cbd7]"
+                            class="ml-3 sm:ml-5 text-[10px] font-semibold text-[#38cbd7]"
                         >
                             2025
                         </span>
@@ -333,8 +348,8 @@
             <!-- CURSOS COMPLEMENTARES -->
             <!-- ================================================= -->
 
-            <section class="pb-16">
-                <div class="mb-8 flex items-center gap-3">
+            <section class="pb-10 sm:pb-16">
+                <div class="mb-6 sm:mb-8 flex items-center gap-3">
                     <!-- Ícone Livro -->
                     <svg
                         class="h-5 w-5 text-[#38cbd7]"
@@ -349,80 +364,80 @@
                         />
                     </svg>
 
-                    <h2 class="font-display text-xl font-bold">
+                    <h2 class="font-display text-lg sm:text-xl font-bold">
                         Cursos complementares
                     </h2>
                 </div>
 
-                <div class="flex flex-wrap gap-3">
+                <div class="flex flex-wrap gap-2.5 sm:gap-3">
                     <span
-                        class="course-badge rounded-full border border-white/[0.08] px-4 py-2.5 text-xs text-[#c2b9c7] transition duration-300 hover:border-[#f05cab]/30"
+                        class="course-badge rounded-full border border-white/[0.08] px-3.5 sm:px-4 py-2 sm:py-2.5 text-[11px] sm:text-xs text-[#c2b9c7] transition duration-300 hover:border-[#f05cab]/30"
                     >
                         Teste de Software e Garantia de Qualidade
                     </span>
 
                     <span
-                        class="course-badge rounded-full border border-white/[0.08] px-4 py-2.5 text-xs text-[#c2b9c7] transition duration-300 hover:border-[#f05cab]/30"
+                        class="course-badge rounded-full border border-white/[0.08] px-3.5 sm:px-4 py-2 sm:py-2.5 text-[11px] sm:text-xs text-[#c2b9c7] transition duration-300 hover:border-[#f05cab]/30"
                     >
                         Testes Exploratórios
                     </span>
 
                     <span
-                        class="course-badge rounded-full border border-white/[0.08] px-4 py-2.5 text-xs text-[#c2b9c7] transition duration-300 hover:border-[#f05cab]/30"
+                        class="course-badge rounded-full border border-white/[0.08] px-3.5 sm:px-4 py-2 sm:py-2.5 text-[11px] sm:text-xs text-[#c2b9c7] transition duration-300 hover:border-[#f05cab]/30"
                     >
                         JMeter
                     </span>
 
                     <span
-                        class="course-badge rounded-full border border-white/[0.08] px-4 py-2.5 text-xs text-[#c2b9c7] transition duration-300 hover:border-[#f05cab]/30"
+                        class="course-badge rounded-full border border-white/[0.08] px-3.5 sm:px-4 py-2 sm:py-2.5 text-[11px] sm:text-xs text-[#c2b9c7] transition duration-300 hover:border-[#f05cab]/30"
                     >
                         Postman
                     </span>
 
                     <span
-                        class="course-badge rounded-full border border-white/[0.08] px-4 py-2.5 text-xs text-[#c2b9c7] transition duration-300 hover:border-[#f05cab]/30"
+                        class="course-badge rounded-full border border-white/[0.08] px-3.5 sm:px-4 py-2 sm:py-2.5 text-[11px] sm:text-xs text-[#c2b9c7] transition duration-300 hover:border-[#f05cab]/30"
                     >
                         Cypress
                     </span>
 
                     <span
-                        class="course-badge rounded-full border border-white/[0.08] px-4 py-2.5 text-xs text-[#c2b9c7] transition duration-300 hover:border-[#f05cab]/30"
+                        class="course-badge rounded-full border border-white/[0.08] px-3.5 sm:px-4 py-2 sm:py-2.5 text-[11px] sm:text-xs text-[#c2b9c7] transition duration-300 hover:border-[#f05cab]/30"
                     >
                         Playwright
                     </span>
 
                     <span
-                        class="course-badge rounded-full border border-white/[0.08] px-4 py-2.5 text-xs text-[#c2b9c7] transition duration-300 hover:border-[#f05cab]/30"
+                        class="course-badge rounded-full border border-white/[0.08] px-3.5 sm:px-4 py-2 sm:py-2.5 text-[11px] sm:text-xs text-[#c2b9c7] transition duration-300 hover:border-[#f05cab]/30"
                     >
                         Selenium WebDriver
                     </span>
 
                     <span
-                        class="course-badge rounded-full border border-white/[0.08] px-4 py-2.5 text-xs text-[#c2b9c7] transition duration-300 hover:border-[#f05cab]/30"
+                        class="course-badge rounded-full border border-white/[0.08] px-3.5 sm:px-4 py-2 sm:py-2.5 text-[11px] sm:text-xs text-[#c2b9c7] transition duration-300 hover:border-[#f05cab]/30"
                     >
                         JavaScript para QAs
                     </span>
 
                     <span
-                        class="course-badge rounded-full border border-white/[0.08] px-4 py-2.5 text-xs text-[#c2b9c7] transition duration-300 hover:border-[#f05cab]/30"
+                        class="course-badge rounded-full border border-white/[0.08] px-3.5 sm:px-4 py-2 sm:py-2.5 text-[11px] sm:text-xs text-[#c2b9c7] transition duration-300 hover:border-[#f05cab]/30"
                     >
                         Git, GitHub Actions e CI para QAs
                     </span>
 
                     <span
-                        class="course-badge rounded-full border border-white/[0.08] px-4 py-2.5 text-xs text-[#c2b9c7] transition duration-300 hover:border-[#f05cab]/30"
+                        class="course-badge rounded-full border border-white/[0.08] px-3.5 sm:px-4 py-2 sm:py-2.5 text-[11px] sm:text-xs text-[#c2b9c7] transition duration-300 hover:border-[#f05cab]/30"
                     >
                         HTML e CSS
                     </span>
 
                     <span
-                        class="course-badge rounded-full border border-white/[0.08] px-4 py-2.5 text-xs text-[#c2b9c7] transition duration-300 hover:border-[#f05cab]/30"
+                        class="course-badge rounded-full border border-white/[0.08] px-3.5 sm:px-4 py-2 sm:py-2.5 text-[11px] sm:text-xs text-[#c2b9c7] transition duration-300 hover:border-[#f05cab]/30"
                     >
                         UI / UX Design
                     </span>
 
                     <span
-                        class="course-badge rounded-full border border-white/[0.08] px-4 py-2.5 text-xs text-[#c2b9c7] transition duration-300 hover:border-[#f05cab]/30"
+                        class="course-badge rounded-full border border-white/[0.08] px-3.5 sm:px-4 py-2 sm:py-2.5 text-[11px] sm:text-xs text-[#c2b9c7] transition duration-300 hover:border-[#f05cab]/30"
                     >
                         Figma
                     </span>
@@ -433,10 +448,10 @@
             <!-- LINK VOLTAR PARA A HOME -->
             <!-- ================================================= -->
 
-            <div class="pb-20">
+            <div class="pb-16 sm:pb-20">
                 <a
                     href="index.html"
-                    class="inline-flex items-center gap-2 text-sm text-[#d3a1ff] transition hover:text-[#f05cab]"
+                    class="inline-flex items-center gap-2 text-xs sm:text-sm text-[#d3a1ff] transition hover:text-[#f05cab]"
                 >
                     <svg
                         class="h-4 w-4"
@@ -451,81 +466,6 @@
                 </a>
             </div>
         </main>
-
-        <!-- ========================================================= -->
-        <!-- FOOTER -->
-        <!-- ========================================================= -->
-
-        <footer class="mx-auto max-w-6xl px-6 pb-8 lg:px-12">
-            <div
-                class="flex items-center justify-between rounded-2xl border border-white/[0.08] bg-[#151019] px-7 py-6"
-            >
-                <a
-                    href="mailto:tatyy-yukie@hotmail.com"
-                    class="font-display text-base font-medium text-white transition hover:text-[#f05cab]"
-                >
-                    Vamos conversar
-                </a>
-
-                <div class="flex items-center gap-5">
-                    <!-- GitHub -->
-                    <a
-                        href="https://github.com/tatyyukie"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="text-[#8f8592] transition hover:text-[#f05cab]"
-                    >
-                        <svg
-                            class="h-4 w-4"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                        >
-                            <path
-                                d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.17A10.9 10.9 0 0 1 12 6.1c.97 0 1.94.13 2.85.38 2.18-1.48 3.14-1.17 3.14-1.17.62 1.57.23 2.73.11 3.02.73.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.03.78 2.08v3.08c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"
-                            />
-                        </svg>
-                    </a>
-
-                    <!-- LinkedIn -->
-                    <a
-                        href="https://www.linkedin.com/in/tatiana-motoyama/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="text-[#8f8592] transition hover:text-[#f05cab]"
-                    >
-                        <svg
-                            class="h-4 w-4"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                        >
-                            <path
-                                d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A1.97 1.97 0 1 0 5.25 6.94 1.97 1.97 0 0 0 5.25 3ZM20.44 13.4c0-3.46-1.85-5.07-4.32-5.07-1.99 0-2.88 1.1-3.38 1.87V8.5H9.36V20h3.38v-5.7c0-1.5.28-2.96 2.15-2.96 1.84 0 1.87 1.72 1.87 3.06V20h3.38l.3-6.6Z"
-                            />
-                        </svg>
-                    </a>
-
-                    <!-- Email -->
-                    <a
-                        href="mailto:tatyy-yukie@hotmail.com"
-                        class="text-[#8f8592] transition hover:text-[#f05cab]"
-                    >
-                        <svg
-                            class="h-4 w-4"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.7"
-                        >
-                            <rect x="3" y="5" width="18" height="14" rx="2" />
-                            <path d="m3 7 9 6 9-6" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <p class="mt-6 text-[10px] text-[#806f82]">tatiana.qa © 2026</p>
-        </footer>
-
         <script src="./js/script.js"></script>
     </body>
 </html>
