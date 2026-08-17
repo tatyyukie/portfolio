@@ -71,7 +71,7 @@ if (downloadCv) {
     downloadCv.addEventListener("click", function (event) {
         event.preventDefault();
 
-        const cvPath = "/assets/QA - Tatiana Yukie Motoyama.pdf ";
+        const cvPath = "./assets/CV-Tatiana-Motoyama.pdf";
 
         const link = document.createElement("a");
 

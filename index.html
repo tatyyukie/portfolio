@@ -45,27 +45,6 @@
             href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&display=swap"
             rel="stylesheet"
         />
-
-        <style>
-            @keyframes marquee {
-                0% {
-                    transform: translateX(0%);
-                }
-                100% {
-                    transform: translateX(-50%);
-                }
-            }
-
-            .animate-marquee {
-                display: flex;
-                width: max-content;
-                animation: marquee 50s linear infinite;
-            }
-
-            .animate-marquee:hover {
-                animation-play-state: paused;
-            }
-        </style>
     </head>
 
     <body class="bg-[#0d0910] text-[#f7f2f8] font-sans antialiased">
@@ -191,7 +170,7 @@
 
             <section
                 id="inicio"
-                class="relative min-h-screen flex flex-col justify-between pt-36 sm:pt-48 md:pt-60 pb-10 transition-all duration-700 opacity-100 translate-y-0"
+                class="relative min-h-0 md:min-h-screen flex flex-col justify-between pt-36 sm:pt-48 md:pt-60 pb-8 sm:pb-10 transition-all duration-700 opacity-100 translate-y-0"
             >
                 <!-- Glow -->
                 <div
@@ -237,7 +216,8 @@
                         class="mt-7 sm:mt-9 flex flex-wrap justify-center items-center gap-4 sm:gap-10"
                     >
                         <a
-                            href="#"
+                            href="./assets/QA - Tatiana Yukie Motoyama.pdf"
+                            download="CV-Tatiana-Motoyama.pdf"
                             id="downloadCv"
                             class="inline-flex items-center gap-2 rounded-full bg-[#f05cab] px-6 py-3 text-xs font-bold text-[#1b0d16] transition hover:-translate-y-0.5 hover:bg-[#ff6db9]"
                         >
@@ -270,8 +250,10 @@
                 </div>
 
                 <!-- STACK CAROUSEL -->
-                <div class="relative mx-auto mt-auto w-full pt-8 sm:pt-12 pb-2">
-                    <div class="flex items-end gap-5">
+                <div
+                    class="relative mx-auto mt-12 sm:mt-auto w-full pt-6 sm:pt-12 pb-2"
+                >
+                    <div class="flex items-center md:items-end gap-5">
                         <!-- Texto fixo (Oculto em telas menores/mobile com 'hidden md:block') -->
                         <div
                             class="hidden md:block min-w-[180px] shrink-0 pb-2"
@@ -833,7 +815,6 @@
                 tatiana.qa © 2026
             </p>
         </footer>
-
-        <script src="./js/script.js"></script>
     </body>
+    <script src="/js/script.js"></script>
 </html>
